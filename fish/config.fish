@@ -1,5 +1,6 @@
 alias ls='ls --color'
 alias werk='cd /home/matthew/Projects/networth/'
+alias brave='brave --ignore-gpu-blocklist --enable-gpu-rasterization --enable-zero-copy --disable-gpu-driver-bug-workarounds --use-gl=egl --enable-accelerated-video-decode'
 alias assh='ssh -i ~/.keys/aws.a---.pem'
 alias assh='ssh -i ~/keys/aws.a---.pem'
 alias nssh='ssh -i ~/.keys/aws.n--.pem'
