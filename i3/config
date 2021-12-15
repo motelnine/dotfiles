@@ -294,6 +294,9 @@ bindsym $mod+Shift+x exec i3lock-fancy & xset dpms force off
 bindsym $mod+n exec nautilus --class Naultilus
 for_window [class="Naultilus"] floating enable
 
+bindsym $mod+Shift+Escape exec stacer --class Stacer¤·
+for_window [class="Stacer"] floating enable·
+
 bindsym $mod+c exec gnome-calculator --class GnomeCalculator·
 for_window [class="GnomeCalculator"] floating enable
 
