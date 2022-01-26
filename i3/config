@@ -375,3 +375,5 @@ exec --no-startup-id xfce4-panel
 
 # Disable wifi sleep on surface book
 #exec --no-startup-id sudo iw dev wlp3s0 set power_save off
+
+for_window [class="^.*"] border pixel 1
