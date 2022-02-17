@@ -43,7 +43,7 @@ bindsym --release $mod+Print exec exec gnome-screenshot
 bindsym --release $mod+Shift+Print exec gnome-screenshot -a
 
 # start dmenu (a program launcher)
-bindsym $mod+d exec dmenu_run
+bindsym $mod+d exec rofi -show drun -show-icons -modi drun
 # There also is the (new) i3-dmenu-desktop which only displays applications
 # shipping a .desktop file. It is a wrapper around dmenu, so you need that
 # installed.
@@ -358,8 +358,7 @@ exec --no-startup-id feh --bg-fill ~/Pictures/Wallpaper/aparatus.jpg
 #exec compton --blur-background --blur-kern 5x5box
 
 #Serious blur (requires AUR:compton-tryone-git)
-#exec --no-startup-id compton --blur-background --blur-method kawase --blur-strength 10 --opacity-rule 85:'class_g="Termite"' --backend glx
-
+#exec --no-startup-id compton --blur-background --blur-method dual_kawase --blur-strength 3 --opacity-rule 85:'class_g="Termite"' --backend glx
 exec --no-startup-id compton
 
 ## i3
