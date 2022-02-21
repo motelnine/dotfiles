@@ -319,8 +319,13 @@ exec --no-startup-id remmina -i
 exec --no-startup-id volumeicon
 
 ## Esc Caps swap
-#exec --no-startup-id xmodmap -e "clear lock" #disable caps lock switch
 #exec --no-startup-id xmodmap -e "keysym Caps_Lock = Escape" #set caps_lock as escape
+#exec --no-startup-id xmodmap -e "clear lock" #disable caps lock switch
+#
+# Gaomon Tablet Fix
+# xinput | grep "Gaomon Tablet Pad" | awk -F "id=" '{print $2}'
+# exec --no-startup-id xinput map-to-output 18 HDMI-0
+
 
 #exec --no-startup-id feh --bg-fill ~/Pictures/Wallpaper/alex-jodoin-cloudy-evening.jpg
 #exec --no-startup-id feh --bg-fill ~/Pictures/Wallpaper/digital_space_universe_4k_8k-1920x1080.jpg
