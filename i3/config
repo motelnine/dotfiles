@@ -364,7 +364,10 @@ exec --no-startup-id feh --bg-fill ~/Pictures/Wallpaper/aparatus.jpg
 
 #Serious blur (requires AUR:compton-tryone-git)
 #exec --no-startup-id compton --blur-background --blur-method dual_kawase --blur-strength 3 --opacity-rule 85:'class_g="Termite"' --backend glx
-exec --no-startup-id compton
+#exec --no-startup-id compton
+
+#Picom
+exec --no-startup-id picom --experimental-backends -b
 
 ## i3
 #exec --no-startup-id polybar main
