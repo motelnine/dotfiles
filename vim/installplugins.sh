@@ -10,6 +10,7 @@ git clone https://github.com/editorconfig/editorconfig-vim.git ~/.vim/bundle/
 git clone https://github.com/mxw/vim-jsx.git ~/.vim/bundle/vim-jsx
 git clone https://github.com/ryanoasis/vim-devicons ~/.vim/bundle/vim-devicons
 git clone https://github.com/airblade/vim-gitgutter ~/.vim/bundle/vim-gitgutter
+git clone https://github.com/fatih/vim-go.git ~/.vim/bundle/vim-go
 
 wget https://raw.githubusercontent.com/Reewr/vim-monokai-phoenix/master/colors/monokai-phoenix.vim -O ~/.vim/colors/monokai-phoenix.vim 
 yay -S aur/nerd-fonts-complete
