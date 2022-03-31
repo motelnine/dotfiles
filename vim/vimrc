@@ -50,9 +50,10 @@ nnoremap <C-J> <C-W><C-J>
 nnoremap <C-K> <C-W><C-K>
 nnoremap <C-L> <C-W><C-L>
 nnoremap <C-H> <C-W><C-H>
+
 " Window resize
-nnoremap <C-a> <C-w>>
-nnoremap <C-z> <C-w><
+nnoremap <C-i> <C-w>>
+nnoremap <C-u> <C-w><
 
 
 " Close Nerdtree if only window
@@ -78,88 +79,5 @@ set list
 
 " let g:ale_linters = {'javascript': ['eslint']}
 " git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
-
-"#!/bin/bash
-"mkdir -p ~/.vim/autoload ~/.vim/bundle
-"curl -LSso ~/.vim/autoload/pathogen.vim https://tpo.pe/pathogen.vim
-"git clone https://github.com/lightline-ale ~/.vim/bundle/lightline-ale
-"git clone https://github.com/lightline.vim ~/.vim/bundle/lightline
-"git clone https://github.com/nerdtree ~/.vim/bundle/nerdtree
-"git clone https://github.com/Vundle.vim ~/.vim/bundle/
-"git clone https://github.com/editorconfig-vim.git ~/.vim/bundle/
-"git clone https://github.com/mxw/vim-jsx.git ~/.vim/bundle/vim-jsx
-"git clone https://github.com/airblade/vim-gitgutter ~/.vim/bundle/vim-gitgutter
-	
-execute pathogen#infect()
-
-set mouse=
-set nowrap
-
-set nocompatible              " be iMproved, required
-filetype off                  " required
-
-" set the runtime path to include Vundle and initialize
-"set rtp+=~/.vim/bundle/Vundle.vim
-"call vundle#begin()
-
-" All of your Plugins must be added before the following line
-"call vundle#end()            " required
-"filetype plugin indent on    " required
-
-" Nerdtree
-" Start Nerdtree if `vim` is used
-autocmd StdinReadPre * let s:std_in=1
-autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
-
-" Start Nerdtree if `vim foldername` is used	
-autocmd StdinReadPre * let s:std_in=1
-autocmd VimEnter * if argc() == 1 && isdirectory(argv()[0]) && !exists("s:std_in") | exe 'NERDTree' argv()[0] | wincmd p | ene | endif
-
-" JSX syntax highlighting on jsx files only
-let g:jsx_ext_required = 1
-
-" Colorscheme
-colorscheme monokai-phoenix
-
-" Keybindings
-" Nerdtree Navigation
-nnoremap <C-J> <C-W><C-J>
-nnoremap <C-K> <C-W><C-K>
-nnoremap <C-L> <C-W><C-L>
-nnoremap <C-H> <C-W><C-H>
-
-" Note : use CTRL+W X to rotate windwos
-
-" Ctrl+N Nerdtree toggle
-nnoremap <C-N> :NERDTreeToggle<CR>
-
-" Window resize
-nnoremap <C-a> <C-w>>
-nnoremap <C-z> <C-w><
-
-
-
-
-" Close Nerdtree if only window
-"autocmd BufEnter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
-
-syntax on
-
-" Disable background opacity
-hi Normal guibg=NONE ctermbg=NONE
-
-" Toggle `set list` with <F5> key
-set listchars=eol:·,tab:»\ ,trail:¤,extends:>,precedes:<
-
-noremap <F5> :set list!<CR>
-inoremap <F5> <C-o>:set list!<CR>
-cnoremap <F5> <C-c>:set list!<CR>
-
-" Tab width
-set tabstop=4
-set shiftwidth=4
-set number
-set scrolloff=10
-set list
 
 let g:ale_linters = {'javascript': ['eslint']}
