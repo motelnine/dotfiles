@@ -10,6 +10,7 @@
 "git clone https://github.com/editorconfig-vim.git ~/.vim/bundle/
 "git clone https://github.com/mxw/vim-jsx.git ~/.vim/bundle/vim-jsx
 "git clone https://github.com/airblade/vim-gitgutter ~/.vim/bundle/vim-gitgutter
+"git clone https://github.com/fatih/vim-go.git ~/.vim/bundle/vim-go
 scriptencoding utf-8
 set encoding=utf-8
 
@@ -59,7 +60,6 @@ nnoremap <C-N> :NERDTreeToggle<CR>
 nnoremap <C-i> <C-w>>
 nnoremap <C-u> <C-w><
 
-
 " Close Nerdtree if only window
 "autocmd BufEnter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
 
@@ -82,7 +82,14 @@ set number
 set scrolloff=10
 set list
 
+" Toggle line numbers
+nnoremap <F6> :set nonumber!<CR>
+
 " let g:ale_linters = {'javascript': ['eslint']}
 " git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 
 let g:ale_linters = {'javascript': ['eslint']}
+
+let g:ale_sign_error = '!'
+let g:ale_sign_warning = '?'
+
