@@ -44,12 +44,16 @@ let g:jsx_ext_required = 1
 " Colorscheme
 colorscheme monokai-phoenix
 
-" Keybindings
-" Nerdtree
+" Nerdtree Navigation
 nnoremap <C-J> <C-W><C-J>
 nnoremap <C-K> <C-W><C-K>
 nnoremap <C-L> <C-W><C-L>
 nnoremap <C-H> <C-W><C-H>
+
+" Note : use CTRL+W X to rotate windwos
+
+" Ctrl+N Nerdtree toggle
+nnoremap <C-N> :NERDTreeToggle<CR>
 
 " Window resize
 nnoremap <C-i> <C-w>>
