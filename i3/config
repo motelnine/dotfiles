@@ -370,7 +370,6 @@ exec --no-startup-id feh --bg-fill ~/Pictures/Wallpaper/aparatus.jpg
 #exec --no-startup-id picom --experimental-backends -b --config ~/.config/picom/picom.config
 exec --no-startup-id picom --experimental-backends -b
 
-
 ## i3
 #exec --no-startup-id polybar main
 
@@ -381,6 +380,10 @@ exec pidgin
 
 #exec --no-startup-id redshift -l 33.51:112.06
 exec --no-startup-id xfce4-panel
+#exec --no-startup-id cd ~/Projects/notes/cherry-tree/ && git pull origin master && keepassxc
+#exec --no-startup-id cd ~/.keys/keepassdb/ && git pull origin master & cherrytree
+
+
 
 # Disable wifi sleep on surface book
 #exec --no-startup-id sudo iw dev wlp3s0 set power_save off
