@@ -311,6 +311,7 @@ new_window 1pixel
 
 #wallpapers
 #exec --no-startup-id polychromatic-tray-applet
+exec --no-startup-id numlockx
 exec --no-startup-id ckb-next -b
 #exec --no-startup-id rocketchat-desktop
 #exec --no-startup-id indicator-kdeconnect
