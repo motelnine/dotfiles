@@ -71,9 +71,9 @@ hi Normal guibg=NONE ctermbg=NONE
 " Toggle `set list` with <F5> key
 " set listchars=eol:,tab:.\ ,trail:~,extends:>,precedes:<
 set listchars=eol:·,tab:»\ ,trail:¤,extends:>,precedes:<
-noremap <F5> :set list!<CR>
-inoremap <F5> <C-o>:set list!<CR>
-cnoremap <F5> <C-c>:set list!<CR>
+noremap <F5> :set list! number!<CR>
+inoremap <F5> <C-o>:set list! number!<CR>
+cnoremap <F5> <C-c>:set list! number!<CR>
 
 " Tab width
 set tabstop=4
