@@ -319,6 +319,7 @@ exec /usr/share/gnome-settings-daemon
 exec --no-startup-id remmina -i
 exec --no-startup-id volumeicon
 exec steam-runtime -silent
+exec --no-startup-id nm-applet
 
 ## Esc Caps swap
 #exec --no-startup-id xmodmap -e "keysym Caps_Lock = Escape" #set caps_lock as escape
