@@ -301,9 +301,12 @@ bindsym $mod+c exec gnome-calculator --class GnomeCalculator·
 for_window [class="GnomeCalculator"] floating enable
 
 #bindsym $mod+Shift+g gedit
-bindsym XF86AudioRaiseVolume exec pactl set-sink-volume 1 +5% #increase sound volume
-bindsym XF86AudioLowerVolume exec pactl set-sink-volume 1 -5% #decrease sound volume
+#bindsym XF86AudioRaiseVolume exec pactl set-sink-volume 1 +5% #increase sound volume
+#bindsym XF86AudioLowerVolume exec pactl set-sink-volume 1 -5% #decrease sound volume
 bindsym XF86AudioMute exec pactl set-sink-mute 1 toggle # mute sound
+bindsym XF86AudioLowerVolume exec --no-startup-id /bin/volume-down.sh
+bindsym XF86AudioRaiseVolume exec --no-startup-id /bin/volume-up.sh
+
 
 new_window 1pixel
 
