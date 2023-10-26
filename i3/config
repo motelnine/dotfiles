@@ -308,7 +308,8 @@ for_window [class="GnomeCalculator"] floating enable
 bindsym XF86AudioMute exec --no-startup-id volume toggle
 bindsym XF86AudioLowerVolume exec --no-startup-id /bin/volume down
 bindsym XF86AudioRaiseVolume exec --no-startup-id /bin/volume up
-
+bindsym $mod+Control+k exec --no-startup-id /bin/volume up
+bindsym $mod+Control+j exec --no-startup-id /bin/volume down
 
 
 new_window 1pixel
