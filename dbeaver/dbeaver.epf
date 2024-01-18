@@ -1,4 +1,4 @@
-#Thu Jan 18 10:14:10 MST 2024
+#Thu Jan 18 11:22:44 MST 2024
 \!/=
 /configuration/org.eclipse.core.net/org.eclipse.core.net.hasMigrated=true
 /configuration/org.eclipse.ui.ide/MAX_RECENT_WORKSPACES=10
@@ -24,7 +24,7 @@
 /instance/org.eclipse.ui.editors/AbstractTextEditor.Color.SelectionForeground=211,215,207
 /instance/org.eclipse.ui.editors/AbstractTextEditor.Color.SelectionForeground.SystemDefault=false
 /instance/org.eclipse.ui.editors/SQLEditor.extraPanels.ratio=500-500
-/instance/org.eclipse.ui.editors/SQLEditor.resultSet.ratio=600-399
+/instance/org.eclipse.ui.editors/SQLEditor.resultSet.ratio=730-269
 /instance/org.eclipse.ui.editors/currentLineColor=50,52,54
 /instance/org.eclipse.ui.editors/lineNumberColor=50,52,54
 /instance/org.eclipse.ui.editors/lineNumberRuler=true
@@ -42,7 +42,7 @@
 /instance/org.eclipse.ui.views.log/show_filter_text=true
 /instance/org.eclipse.ui.workbench//org.eclipse.ui.commands/state/org.eclipse.ui.navigator.resources.nested.changeProjectPresentation/org.eclipse.ui.commands.radioState=false
 /instance/org.eclipse.ui.workbench/ColorsAndFontsPreferencePage.expandedCategories=Torg.eclipse.ui.workbenchMisc\tTorg.jkiss.dbeaver.ui.presentation.results\tTorg.jkiss.dbeaver.ui.presentation.sql
-/instance/org.eclipse.ui.workbench/ColorsAndFontsPreferencePage.selectedElement=Corg.jkiss.dbeaver.sql.editor.color.column.foreground
+/instance/org.eclipse.ui.workbench/ColorsAndFontsPreferencePage.selectedElement=Corg.jkiss.dbeaver.sql.editor.color.datatype.foreground
 /instance/org.eclipse.ui.workbench/DECORATIONS_COLOR=255,144,0
 /instance/org.eclipse.ui.workbench/org.eclipse.compare.contentmergeviewer.TextMergeViewer=1|JetBrainsMono Nerd Font Mono|14.0|0|GTK|1|;
 /instance/org.eclipse.ui.workbench/org.eclipse.debug.ui.DetailPaneFont=1|DroidSansMono Nerd Font|11.0|0|GTK|1|;
@@ -55,19 +55,19 @@
 /instance/org.eclipse.ui.workbench/org.eclipse.ui.workbench.ACTIVE_TAB_TEXT_COLOR=255,255,255
 /instance/org.eclipse.ui.workbench/org.eclipse.ui.workbench.texteditor.blockSelectionModeFont=1|DejaVuSansMono Nerd Font Mono|11.0|0|GTK|1|;
 /instance/org.eclipse.ui.workbench/org.jkiss.dbeaver.sql.editor.color.column.derived.foreground=0,255,161
-/instance/org.eclipse.ui.workbench/org.jkiss.dbeaver.sql.editor.color.column.foreground=79,230,255
-/instance/org.eclipse.ui.workbench/org.jkiss.dbeaver.sql.editor.color.command.foreground=254,151,32
+/instance/org.eclipse.ui.workbench/org.jkiss.dbeaver.sql.editor.color.column.foreground=33,255,246
+/instance/org.eclipse.ui.workbench/org.jkiss.dbeaver.sql.editor.color.command.foreground=255,173,57
 /instance/org.eclipse.ui.workbench/org.jkiss.dbeaver.sql.editor.color.comment.foreground=127,127,127
-/instance/org.eclipse.ui.workbench/org.jkiss.dbeaver.sql.editor.color.datatype.foreground=231,219,117
+/instance/org.eclipse.ui.workbench/org.jkiss.dbeaver.sql.editor.color.datatype.foreground=0,152,196
 /instance/org.eclipse.ui.workbench/org.jkiss.dbeaver.sql.editor.color.delimiter.foreground=144,238,144
 /instance/org.eclipse.ui.workbench/org.jkiss.dbeaver.sql.editor.color.disabled.background=38,41,44
 /instance/org.eclipse.ui.workbench/org.jkiss.dbeaver.sql.editor.color.keyword.foreground=255,58,118
 /instance/org.eclipse.ui.workbench/org.jkiss.dbeaver.sql.editor.color.number.foreground=102,217,238
 /instance/org.eclipse.ui.workbench/org.jkiss.dbeaver.sql.editor.color.parameter.foreground=0,218,255
-/instance/org.eclipse.ui.workbench/org.jkiss.dbeaver.sql.editor.color.schema.foreground=255,159,47
-/instance/org.eclipse.ui.workbench/org.jkiss.dbeaver.sql.editor.color.string.foreground=167,226,46
-/instance/org.eclipse.ui.workbench/org.jkiss.dbeaver.sql.editor.color.table.alias.foreground=249,88,255
-/instance/org.eclipse.ui.workbench/org.jkiss.dbeaver.sql.editor.color.table.foreground=249,88,255
+/instance/org.eclipse.ui.workbench/org.jkiss.dbeaver.sql.editor.color.schema.foreground=255,174,50
+/instance/org.eclipse.ui.workbench/org.jkiss.dbeaver.sql.editor.color.string.foreground=82,255,130
+/instance/org.eclipse.ui.workbench/org.jkiss.dbeaver.sql.editor.color.table.alias.foreground=237,142,255
+/instance/org.eclipse.ui.workbench/org.jkiss.dbeaver.sql.editor.color.table.foreground=237,142,255
 /instance/org.eclipse.ui.workbench/org.jkiss.dbeaver.sql.editor.color.text.background=73,73,64
 /instance/org.eclipse.ui.workbench/org.jkiss.dbeaver.sql.editor.color.text.foreground=255,255,255
 /instance/org.eclipse.ui.workbench/org.jkiss.dbeaver.sql.editor.font.output=1|JetBrains Mono|13.0|0|GTK|1|;
