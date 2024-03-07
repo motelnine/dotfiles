@@ -75,6 +75,11 @@ noremap <F5> :set list! number!<CR>
 inoremap <F5> <C-o>:set list! number!<CR>
 cnoremap <F5> <C-c>:set list! number!<CR>
 
+# Toggle python horizontal bar
+noremap <F7> :set colorcolumn=79<CR>
+inoremap <F7> :set colorcolumn=79<CR>
+cnoremap <F7> :set colorcolumn=79<CR>
+
 " Tab width
 set tabstop=4
 set shiftwidth=4
