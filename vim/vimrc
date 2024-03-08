@@ -75,7 +75,7 @@ noremap <F5> :set list! number!<CR>
 inoremap <F5> <C-o>:set list! number!<CR>
 cnoremap <F5> <C-c>:set list! number!<CR>
 
-# Toggle python horizontal bar
+" Toggle python vertical bar
 noremap <F7> :set colorcolumn=79<CR>
 inoremap <F7> :set colorcolumn=79<CR>
 cnoremap <F7> :set colorcolumn=79<CR>
@@ -95,6 +95,7 @@ nnoremap <F6> :set nonumber!<CR>
 
 let g:ale_linters = {'javascript': ['eslint']}
 
-let g:ale_sign_error = '!'
-let g:ale_sign_warning = '?'
+let g:ale_sign_error = '✗'
+let g:ale_sign_warning = '⚠'
+let g:ale_virtualtext_cursor=0
 
