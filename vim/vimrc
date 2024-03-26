@@ -80,6 +80,29 @@ noremap <F7> :set colorcolumn=79<CR>
 inoremap <F7> :set colorcolumn=79<CR>
 cnoremap <F7> :set colorcolumn=79<CR>
 
+
+" Toggle between tabs as four spaces and tabs as tab key
+function! ToggleTabs()
+    if &expandtab == 1
+        set noexpandtab
+        set softtabstop=0
+        set shiftwidth=0
+        set tabstop=4
+        echo "Tabs enabled"
+    else
+        set expandtab
+        set softtabstop=4
+        set shiftwidth=4
+        set tabstop=4
+        echo "Tabs replaced with spaces (4 spaces)"
+    endif
+endfunction
+
+" Map F8 to call ToggleTabs() function in normal mode
+nnoremap <silent> <F8> :call ToggleTabs()<CR>
+cnoremap <silent> <F8> :call ToggleTabs()<CR>
+inoremap <silent> <F8> <C-o>:call ToggleTabs()<CR>
+
 " Tab width
 set tabstop=4
 set shiftwidth=4
