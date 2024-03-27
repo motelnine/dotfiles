@@ -103,6 +103,26 @@ nnoremap <silent> <F8> :call ToggleTabs()<CR>
 cnoremap <silent> <F8> :call ToggleTabs()<CR>
 inoremap <silent> <F8> <C-o>:call ToggleTabs()<CR>
 
+" Write mehlp message (must press <enter> afterwards)
+function! WriteMessage()
+    " Define the message
+    let message = "<F5>:list <F6>:num <F7>:vr <F9>:cmnt Ctrl+i:+ Ctrl+u:-"
+
+    " Save cursor position and enter command-line mode
+    let save_cursor = getpos('.')
+    call feedkeys(":")
+
+    " Write the message
+    call feedkeys("echo '".message."'")
+
+    " Restore cursor position
+    call setpos('.', save_cursor)
+endfunction
+
+" Map F12 key to call the function
+nnoremap <F12> :call WriteMessage()<CR>
+inoremap <F12> <Esc>:call WriteMessage()<CR>
+
 " Tab width
 set tabstop=4
 set shiftwidth=4
