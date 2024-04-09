@@ -12,7 +12,9 @@ git clone https://github.com/ryanoasis/vim-devicons ~/.vim/bundle/vim-devicons
 git clone https://github.com/airblade/vim-gitgutter ~/.vim/bundle/vim-gitgutter
 git clone https://github.com/fatih/vim-go.git ~/.vim/bundle/vim-go
 git clone https://github.com/dense-analysis/ale.git ~/.vim/bundle/ale
-git clone https://github.com/isRuslan/vim-es6.git ~/.vim//bundle/vim-es6
+git clone https://github.com/isRuslan/vim-es6.git ~/.vim/bundle/vim-es6
+git clone https://github.com/wfxr/minimap.vim ~/.vim/bundle/minimap
 
 wget https://raw.githubusercontent.com/Reewr/vim-monokai-phoenix/master/colors/monokai-phoenix.vim -O ~/.vim/colors/monokai-phoenix.vim 
 yay -S aur/nerd-fonts-complete
+yay -S code-minimap
