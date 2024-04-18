@@ -347,7 +347,7 @@ exec --no-startup-id nm-applet
 #exec --no-startup-id feh --bg-fill ~/Pictures/Wallpaper/1337.jpg
 #exec --no-startup-id feh --bg-fill ~/Pictures/Wallpaper/hax.jpg
 #exec --no-startup-id feh --bg-fill ~/Pictures/Wallpaper/RainCityLights.jpg
-#exec --no-startup-id feh --bg-fill ~/Pictures/Wallpaper/SmallMemory.png
+#exec --no-startup-id feh --bg-scale ~/Pictures/Wallpaper/SmallMemory.png
 #exec --no-startup-id feh --bg-fill ~/Pictures/Wallpaper/SimonStallenhag1994.jpg
 #exec --no-startup-id feh --bg-fill ~/Pictures/Wallpaper/sunset.jpg
 #exec --no-startup-id feh --bg-fill ~/Pictures/Wallpaper/intenseColors.png
