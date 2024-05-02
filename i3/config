@@ -44,6 +44,9 @@ bindsym --release $mod+Shift+Print exec gnome-screenshot -a
 
 # start dmenu (a program launcher)
 bindsym $mod+d exec rofi -show drun -show-icons -modi drun
+bindsym $mod+d exec rofi -show drun -show-icons -modi drun
+
+
 # There also is the (new) i3-dmenu-desktop which only displays applications
 # shipping a .desktop file. It is a wrapper around dmenu, so you need that
 # installed.
@@ -358,7 +361,8 @@ exec --no-startup-id nm-applet
 #exec --no-startup-id feh --bg-fill ~/Pictures/Wallpaper/keyboards.jpg
 #exec --no-startup-id feh --bg-fill ~/Pictures/Wallpaper/under-the-stranger-horizon.jpg
 #exec --no-startup-id feh --bg-fill ~/Pictures/Wallpaper/nebulosa.png
-exec --no-startup-id feh --bg-fill ~/Pictures/Wallpaper/aparatus.jpg
+#exec --no-startup-id feh --bg-fill ~/Pictures/Wallpaper/aparatus.jpg
+exec --no-startup-id feh --bg-fill ~/Pictures/Wallpaper/kmart.jpeg
 
 # Animated Wallpaper
 #exec --no-startup-id /var/scripts/back4 0.10 ~/Pictures/Animated/canal.gif & /var/scripts/back4 speed ~/Pictures/Animated/canal.gif
