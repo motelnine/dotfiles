@@ -80,6 +80,9 @@ noremap <F7> :set colorcolumn=79<CR>
 inoremap <F7> :set colorcolumn=79<CR>
 cnoremap <F7> :set colorcolumn=79<CR>
 
+" Page up and down ctrl
+nnoremap <C-j> <C-d><C-e>
+nnoremap <C-k> <C-u><C-e>
 
 " Toggle between tabs as four spaces and tabs as tab key
 function! ToggleTabs()
