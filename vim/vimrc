@@ -42,6 +42,9 @@ autocmd VimEnter * if argc() == 1 && isdirectory(argv()[0]) && !exists("s:std_in
 " JSX syntax highlighting on jsx files only
 let g:jsx_ext_required = 1
 
+" Move nerdtree to the right
+let g:NERDTreeWinPos = "right"
+
 " Colorscheme
 colorscheme monokai-phoenix
 
