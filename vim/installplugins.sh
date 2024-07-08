@@ -16,5 +16,5 @@ git clone https://github.com/isRuslan/vim-es6.git ~/.vim/bundle/vim-es6
 #git clone https://github.com/wfxr/minimap.vim ~/.vim/bundle/minimap
 
 wget https://raw.githubusercontent.com/Reewr/vim-monokai-phoenix/master/colors/monokai-phoenix.vim -O ~/.vim/colors/monokai-phoenix.vim 
-yay -S aur/nerd-fonts-complete
-yay -S code-minimap
+#yay -S aur/nerd-fonts-complete
+#yay -S code-minimap
