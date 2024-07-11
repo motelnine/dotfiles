@@ -78,10 +78,20 @@ noremap <F5> :set list! number!<CR>
 inoremap <F5> <C-o>:set list! number!<CR>
 cnoremap <F5> <C-c>:set list! number!<CR>
 
-" Toggle python vertical bar
-noremap <F7> :set colorcolumn=79<CR>
-inoremap <F7> :set colorcolumn=79<CR>
-cnoremap <F7> :set colorcolumn=79<CR>
+" Toggle vertical bar between 79/100/0
+function! ToggleColorColumn()
+    if &colorcolumn == ""
+        set colorcolumn=79
+    elseif &colorcolumn == "79"
+        set colorcolumn=100
+    else
+        set colorcolumn=
+    endif
+endfunction
+
+nnoremap <F7> :call ToggleColorColumn()<CR>
+inoremap <F7> <C-o>:call ToggleColorColumn()<CR>
+cnoremap <F7> <C-c>:call ToggleColorColumn()<CR>
 
 " Page up and down ctrl
 nnoremap <C-j> <C-d><C-e>
