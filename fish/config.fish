@@ -8,4 +8,5 @@ alias ll='ls -al'
 alias youtube='firefox --new-window https://www.youtube.com'
 alias cb='xclip -sel clip'
 alias cam='mpv av://v4l2:/dev/video0'
+alias kubectl='sudo microk8s kubectl'
 neofetch
