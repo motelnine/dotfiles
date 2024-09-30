@@ -10,7 +10,8 @@ alias cb='xclip -sel clip'
 alias cam='mpv av://v4l2:/dev/video0'
 alias kubectl='sudo microk8s kubectl'
 function fish_greeting
+	echo -e "\n\033[0;30m—————————————————————————————————————————"
 	echo -e "\033[0;36m `>\033[0;30m‡\033[0;31m<`\033[0;36m  msarch"
-	echo -e "\033[0;36m  ` \033[0;31m`\033[0;31m   ¯¯¯¯¯¯¯\033[0m
+	echo -e "\033[0;36m  ` \033[0;31m`\033[0;31m   ¯¯¯¯¯¯¯\033[0m\n"
 end
 neofetch
