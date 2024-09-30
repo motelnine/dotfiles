@@ -9,4 +9,7 @@ alias youtube='firefox --new-window https://www.youtube.com'
 alias cb='xclip -sel clip'
 alias cam='mpv av://v4l2:/dev/video0'
 alias kubectl='sudo microk8s kubectl'
+function fish_greeting
+	echo -e '\033[0;37m----------------------------------------\033[0m'
+end
 neofetch
