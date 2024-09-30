@@ -11,7 +11,6 @@ alias cam='mpv av://v4l2:/dev/video0'
 alias kubectl='sudo microk8s kubectl'
 function fish_greeting
 	echo -e '\033[0;37m----------------------------------------\033[0m\n'
-	echo -e "\n"
 	echo -e "\033[0;37m{ \w/ }          \033[0m"
 	echo -e "\033[0;37m (/^\)\033[0m    msarch"
 	echo -e "\033[0;37m '   '    ¯¯¯¯¯¯ \033[0m"
