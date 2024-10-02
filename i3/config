@@ -297,8 +297,8 @@ bindsym $mod+Shift+x exec i3lock-fancy & xset dpms force off
 #bindsym $mod+Shift+v exec pavucontrol
 #bindsym $mod+n exec nautilus
 
-bindsym $mod+n exec nautilus --class Naultilus
-for_window [class="Naultilus"] floating enable
+bindsym $mod+n exec thunar --class Thunar
+for_window [class="Thunar"] floating enable
 
 bindsym $mod+Shift+Escape exec stacer --class Stacer¤
 for_window [instance="stacer"] floating enable
