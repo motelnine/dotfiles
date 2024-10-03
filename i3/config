@@ -103,7 +103,7 @@ bindsym $mod+Shift+s sticky toggle
 bindsym $mod+space focus mode_toggle
 
 # focus the parent container
-bindsym $mod+a focus parent
+#bindsym $mod+a focus parent
 
 # focus the child container
 #bindsym $mod+d focus child
@@ -301,6 +301,7 @@ bindsym $mod+n exec thunar
 bindsym $mod+Shift+Escape exec stacer
 bindsym $mod+c exec gnome-calculator
 bindsym $mod+F1 exec cherrytree
+bindsym $mod+a exec audacious
 
 for_window [instance="thunar"] floating enable
 for_window [instance="steamwebhelper"] floating enable
