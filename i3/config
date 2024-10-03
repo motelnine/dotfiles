@@ -37,6 +37,7 @@ bindsym $mod+Return exec kitty
 
 # kill focused window
 bindsym $mod+Shift+q kill
+bindsym $mod+q kill
 
 # Print Screen·
 bindsym --release $mod+Print exec exec gnome-screenshot
@@ -302,6 +303,7 @@ bindsym $mod+Shift+Escape exec stacer
 bindsym $mod+c exec gnome-calculator
 bindsym $mod+F1 exec cherrytree
 bindsym $mod+a exec audacious
+
 
 for_window [instance="thunar"] floating enable
 for_window [instance="steamwebhelper"] floating enable
