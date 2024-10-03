@@ -300,7 +300,7 @@ bindsym $mod+Shift+x exec i3lock-fancy & xset dpms force off
 bindsym $mod+n exec thunar --class Thunar
 for_window [class="Thunar"] floating enable
 
-bindsym $mod+Shift+Escape exec stacer --class Stacer¤
+bindsym $mod+Shift+Escape exec stacer --class Stacer
 for_window [instance="stacer"] floating enable
 
 bindsym $mod+c exec gnome-calculator --class GnomeCalculator
@@ -338,6 +338,7 @@ for_window [instance="parole"] floating enable
 for_window [instance="gnome-menu-editor-qt"] floating enable
 for_window [instance="xfce4-panel"] floating enable
 for_window [instance="evince"] floating enable
+for_window [instance="stacer"] floating enable
 
 #bindsym $mod+Shift+g gedit
 #bindsym XF86AudioRaiseVolume exec pactl set-sink-volume 1 +5% #increase sound volume
