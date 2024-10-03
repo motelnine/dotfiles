@@ -297,11 +297,12 @@ bindsym $mod+Shift+x exec i3lock-fancy & xset dpms force off
 #bindsym $mod+Shift+v exec pavucontrol
 #bindsym $mod+n exec nautilus
 
-bindsym $mod+n exec thunar --class Thunar
-bindsym $mod+Shift+Escape exec stacer --class Stacer
-bindsym $mod+c exec gnome-calculator --class GnomeCalculator
+bindsym $mod+n exec thunar
+bindsym $mod+Shift+Escape exec stacer
+bindsym $mod+c exec gnome-calculator
 bindsym $mod+F1 exec cherrytree
 
+for_window [instance="thunar"] floating enable
 for_window [instance="steamwebhelper"] floating enable
 for_window [instance="keepassxc"] floating enable
 for_window [instance="gedit"] floating enable
