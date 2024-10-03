@@ -298,14 +298,8 @@ bindsym $mod+Shift+x exec i3lock-fancy & xset dpms force off
 #bindsym $mod+n exec nautilus
 
 bindsym $mod+n exec thunar --class Thunar
-for_window [class="Thunar"] floating enable
-
 bindsym $mod+Shift+Escape exec stacer --class Stacer
-for_window [instance="stacer"] floating enable
-
 bindsym $mod+c exec gnome-calculator --class GnomeCalculator
-for_window [instance="gnome-calculator"] floating enable
-
 bindsym $mod+F1 exec cherrytree
 
 for_window [instance="steamwebhelper"] floating enable
@@ -329,6 +323,7 @@ for_window [instance="xfce4-taskmanager"] floating enable
 for_window [instance="plasma-systemmonitor"] floating enable
 for_window [instance="gnome-disks"] floating enable
 for_window [instance="gnome-calendar"] floating enable
+for_window [instance="gnome-calculator"] floating enable
 for_window [instance="snes9x-gtk"] floating enable
 for_window [instance="Eddie"] floating enable
 for_window [instance="file-roller"] floating enable
@@ -419,7 +414,7 @@ exec --no-startup-id feh --bg-fill ~/Pictures/Wallpaper/kmart.jpeg
 #exec --no-startup-id compton
 
 #Picom
-exec --no-startup-id picom -b
+exec --no-startup-id picom --backend glx -b
 
 ## i3
 #exec --no-startup-id polybar main
