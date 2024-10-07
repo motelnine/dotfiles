@@ -103,6 +103,11 @@ bindsym $mod+Shift+s sticky toggle
 # change focus between tiling / floating windows
 bindsym $mod+space focus mode_toggle
 
+# audacious
+bindsym $mod+Mod1+l exec "audacious -p -f"
+bindsym $mod+Mod1+h exec "audacious -p -r"
+bindsym $mod+Mod1+space exec "audacious --play-pause"
+
 # focus the parent container
 #bindsym $mod+a focus parent
 
