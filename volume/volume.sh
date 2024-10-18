@@ -1,11 +1,11 @@
 #!/bin/sh
 if [ "$1" == "up" ]
 then
-	(pactl set-sink-volume "$(pactl info | grep 'Default Sink' | awk '{print $3}')" +5%)
+	(pactl set-sink-volume "$(pactl info | grep 'Default Sink' | awk '{print $3}')" +2.5%)
 
 elif [ "$1" == "down" ]
 then
-	(pactl set-sink-volume "$(pactl info | grep 'Default Sink' | awk '{print $3}')" -5%)
+	(pactl set-sink-volume "$(pactl info | grep 'Default Sink' | awk '{print $3}')" -2.5%)
 
 elif [ "$1" == "mute" ]
 then
