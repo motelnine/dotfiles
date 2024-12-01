@@ -411,7 +411,10 @@ exec --no-startup-id nm-applet
 ## Esc Caps swap
 #exec --no-startup-id xmodmap -e "keysym Caps_Lock = Escape" #set caps_lock as escape
 #exec --no-startup-id xmodmap -e "clear lock" #disable caps lock switch
-#
+
+# Evoluent Mouse reconfig
+#exec --no-startup-id xmodmap -e "pointer = 1 3 8 4 5 11 10 6 2 7 9 12"
+
 # Gaomon Tablet Fix
 # xinput | grep "Gaomon Tablet Pad" | awk -F "id=" '{print $2}'
 # exec --no-startup-id xinput map-to-output 18 HDMI-0
