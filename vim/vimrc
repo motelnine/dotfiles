@@ -152,7 +152,8 @@ nnoremap <F6> :set nonumber!<CR>
 " let g:ale_linters = {'javascript': ['eslint']}
 " git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 
-let g:ale_linters = {'javascript': ['eslint']}
+"let g:ale_linters = {'javascript': ['eslint']}
+let g:ale_linters = {'python': ['pylint'], 'javascript': ['eslint']}
 
 let g:ale_sign_error = '✗'
 let g:ale_sign_warning = '⚠'
