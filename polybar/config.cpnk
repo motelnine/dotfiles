@@ -1,0 +1,129 @@
+[colors]
+background = #00000000
+background-alt = #444
+foreground = #dfdfdf
+foreground-alt = #888
+primary = #ffb52a
+secondary = #e60053
+alert = #bd2c40
+
+; Cyberpunk colors - blues and reds
+cyber-pink = #ff2a6d
+cyber-red = #ff0055
+cyber-blue = #00fff5
+cyber-blue-alt = #0af0ce
+cyber-blue-dark = #00c8ff
+
+[bar/main]
+width = 100%
+height = 27
+radius = 0
+fixed-center = true
+
+background = ${colors.background}
+foreground = ${colors.foreground}
+
+line-size = 2
+line-color = ${colors.cyber-blue}
+
+padding-left = 0
+padding-right = 2
+
+module-margin-left = 1
+module-margin-right = 2
+
+font-0 = fixed:pixelsize=10;1
+font-1 = unifont:fontformat=truetype:size=8:antialias=false;0
+font-2 = "Font Awesome 5 Free:style=Regular:pixelsize=10;1"
+font-3 = "Font Awesome 5 Free:style=Solid:pixelsize=10;1"
+
+modules-left = i3
+modules-center = xwindow
+modules-right = cpu memory pulseaudio date systray
+
+tray-position = right
+tray-padding = 2
+
+cursor-click = pointer
+
+[module/xwindow]
+type = internal/xwindow
+label = %title:0:50:...%
+format-underline = ${colors.cyber-blue-alt}
+
+[module/i3]
+type = internal/i3
+format = <label-state> <label-mode>
+index-sort = true
+wrapping-scroll = false
+
+label-mode-padding = 2
+label-mode-foreground = #000
+label-mode-background = ${colors.primary}
+
+label-focused = %index%
+label-focused-background = ${colors.background-alt}
+label-focused-underline = ${colors.cyber-pink}
+label-focused-padding = 2
+
+label-unfocused = %index%
+label-unfocused-padding = 2
+
+label-visible = %index%
+label-visible-background = ${colors.background-alt}
+label-visible-underline = ${colors.cyber-blue}
+label-visible-padding = 2
+
+label-urgent = %index%
+label-urgent-background = ${colors.alert}
+label-urgent-underline = ${colors.cyber-red}
+label-urgent-padding = 2
+
+[module/cpu]
+type = internal/cpu
+interval = 2
+format-prefix = "CPU "
+format-prefix-foreground = ${colors.foreground-alt}
+format-underline = ${colors.cyber-blue}
+label = %percentage:2%%
+
+[module/memory]
+type = internal/memory
+interval = 2
+format-prefix = "RAM "
+format-prefix-foreground = ${colors.foreground-alt}
+format-underline = ${colors.cyber-pink}
+label = %percentage_used%%
+
+[module/pulseaudio]
+type = internal/pulseaudio
+format-volume = <label-volume>
+format-volume-underline = ${colors.cyber-blue-dark}
+label-volume = VOL %percentage%%
+label-volume-foreground = ${root.foreground}
+label-muted = muted
+label-muted-foreground = #666
+label-muted-underline = ${colors.cyber-red}
+
+; Add click handlers for PulseAudio
+click-left = pavucontrol &
+click-right = pavucontrol &
+
+[module/date]
+type = internal/date
+interval = 5
+date = %Y-%m-%d
+time = %H:%M
+label = %date% %time%
+format-underline = ${colors.cyber-blue-alt}
+
+; Add click handlers for GNOME Calendar
+click-left = gnome-calendar &
+click-right = gnome-calendar &
+
+[settings]
+screenchange-reload = true
+
+[global/wm]
+margin-top = 0
+margin-bottom = 0
