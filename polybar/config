@@ -391,6 +391,14 @@ animation-charging-1 = "󰁾 "
 animation-charging-2 = "󰂄 "
 animation-charging-framerate = 750
 
+animation-discharging-0 = "󰂌 "
+animation-discharging-1 = "󱟟 "
+animation-discharging-2 = "󰂎 "
+animation-discharging-framerate = 750
+;animation-discharging-0-foreground = #ff0000
+;animation-discharging-1-foreground = #ff5f00
+;animation-discharging-2-foreground = #ff8700
+
 format-full-underline = #3DFFF3
 format-discharging-underline = #FFA25E
 format-charging-underline = #3DFF3
