@@ -343,7 +343,7 @@ label-volume-foreground = ${colors.foreground}
 
 ;format-volume-underline = #303F9F
 format-volume-underline = #074856
-
+click-right = pavucontrol
 format-muted-prefix = "muted "
 format-muted-foreground = ${colors.foreground-alt}
 label-muted = %percentage%%
