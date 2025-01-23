@@ -378,6 +378,7 @@ for_window [instance="gnome-menu-editor-qt"] floating enable
 for_window [instance="xfce4-panel"] floating enable
 for_window [instance="evince"] floating enable
 for_window [instance="stacer"] floating enable
+for_window [instance="pavucontrol"] floating enable
 
 #bindsym $mod+Shift+g gedit
 #bindsym XF86AudioRaiseVolume exec pactl set-sink-volume 1 +5% #increase sound volume
