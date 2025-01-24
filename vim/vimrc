@@ -159,3 +159,7 @@ let g:ale_sign_error = '✗'
 let g:ale_sign_warning = '⚠'
 let g:ale_virtualtext_cursor=0
 
+"Ctrl+y for copy to clipboard in visual mode
+"If this isn't working you probably have vim-minimal installed
+"Install gvim
+vnoremap <C-y> "+y
