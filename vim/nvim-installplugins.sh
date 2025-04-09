@@ -25,23 +25,25 @@ git clone https://github.com/isRuslan/vim-es6.git ~/.config/nvim/bundle/vim-es6
 # Download colorscheme
 wget https://raw.githubusercontent.com/Reewr/vim-monokai-phoenix/master/colors/monokai-phoenix.vim -O ~/.config/nvim/colors/monokai-phoenix.vim 
 
-# Create initial config file with plugin setup
-cat > ~/.config/nvim/init.vim << 'EOL'
-" Load plugins with vim-plug
-call plug#begin('~/.config/nvim/bundle')
-Plug 'maximbaz/lightline-ale'
-Plug 'itchyny/lightline.vim'
-Plug 'scrooloose/nerdtree'
-Plug 'VundleVim/Vundle.vim'
-Plug 'editorconfig/editorconfig-vim'
-Plug 'mxw/vim-jsx'
-Plug 'ryanoasis/vim-devicons'
-Plug 'airblade/vim-gitgutter'
-Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
-Plug 'dense-analysis/ale'
-Plug 'isRuslan/vim-es6'
-"Plug 'wfxr/minimap.vim'
-call plug#end()
+## Create initial config file with plugin setup
+#cat > ~/.config/nvim/init.vim << 'EOL'
+#" Load plugins with vim-plug
+#call plug#begin('~/.config/nvim/bundle')
+#Plug 'maximbaz/lightline-ale'
+#Plug 'itchyny/lightline.vim'
+#Plug 'scrooloose/nerdtree'
+#Plug 'VundleVim/Vundle.vim'
+#Plug 'editorconfig/editorconfig-vim'
+#Plug 'mxw/vim-jsx'
+#Plug 'ryanoasis/vim-devicons'
+#Plug 'airblade/vim-gitgutter'
+#Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
+#Plug 'dense-analysis/ale'
+#Plug 'isRuslan/vim-es6'
+#"Plug 'wfxr/minimap.vim'
+#call plug#end()
+
+cp ~/.vimrc ~/.config/nvim/init.vim
 
 " Set colorscheme
 colorscheme monokai-phoenix
