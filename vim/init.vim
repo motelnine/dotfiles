@@ -190,3 +190,9 @@ let g:ale_virtualtext_cursor=0
 "let g:minimap_width = 10
 "let g:minimap_auto_start = 1
 "let g:minimap_auto_start_win_enter = 1
+
+"Ctrl+y for copy to clipboard in visual mode
+"If this isn't working you probably have vim-minimal installed
+"Install gvim
+vnoremap <C-y> "+y
+
