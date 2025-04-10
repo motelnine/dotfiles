@@ -58,6 +58,11 @@ autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
 autocmd StdinReadPre * let s:std_in=1
 autocmd VimEnter * if argc() == 1 && isdirectory(argv()[0]) && !exists("s:std_in") | exe 'NERDTree' argv()[0] | wincmd p | ene | endif
 
+" Python tabs instead of spaces
+autocmd FileType python setlocal noexpandtab
+autocmd FileType python setlocal tabstop=4
+autocmd FileType python setlocal shiftwidth=4
+
 " Close Vim if NERDTree is the only window remaining
 autocmd BufEnter * if tabpagenr('$') == 1 && winnr('$') == 1 && exists('b:NERDTree') && b:NERDTree.isTabTree() | quit | endif
 
