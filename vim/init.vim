@@ -90,6 +90,14 @@ nnoremap <C-N> :NERDTreeToggle<CR>
 nnoremap <C-i> <C-w>>
 nnoremap <C-u> <C-w><
 
+" Map Ctrl+k to page up
+nnoremap <C-k> <C-u>
+inoremap <C-k> <C-o><C-u>
+
+" Map Ctrl+j to page down
+nnoremap <C-j> <C-d>
+inoremap <C-j> <C-o><C-d>
+
 " Close Nerdtree if only window
 "autocmd BufEnter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
 
