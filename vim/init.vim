@@ -11,6 +11,7 @@ Plug 'airblade/vim-gitgutter'
 Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
 Plug 'dense-analysis/ale'
 Plug 'isRuslan/vim-es6'
+Plug 'mfussenegger/nvim-lint'
 "Plug 'wfxr/minimap.vim'
 call plug#end()
 
