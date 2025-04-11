@@ -12,6 +12,9 @@ Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
 Plug 'dense-analysis/ale'
 Plug 'isRuslan/vim-es6'
 Plug 'mfussenegger/nvim-lint'
+Plug 'nvim-lua/plenary.nvim'
+Plug 'nvim-telescope/telescope.nvim', { 'tag': '0.1.8' }
+
 "Plug 'wfxr/minimap.vim'
 call plug#end()
 
