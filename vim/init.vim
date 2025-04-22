@@ -208,3 +208,14 @@ let g:ale_virtualtext_cursor=0
 "Install gvim
 vnoremap <C-y> "+y
 
+"setlocal spell spelllang=en_us
+function! ToggleSpell()
+  if &spell
+    setlocal nospell
+  else
+    setlocal spell spelllang=en_us
+  endif
+endfunction
+
+nnoremap <F4> :call ToggleSpell()<CR>
+inoremap <F4> <C-O>:call ToggleSpell()<CR>
