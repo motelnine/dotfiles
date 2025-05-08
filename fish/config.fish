@@ -14,4 +14,7 @@ function fish_greeting
 	echo -e "\033[0;36m `>\033[0;30m‡\033[0;31m<`\033[0;36m  msarch"
 	echo -e "\033[0;36m  ` \033[0;31m`\033[0;31m   ¯¯¯¯¯¯¯\033[0m\n"
 end
-neofetch
+
+if status is-interactive
+	neofetch
+end
