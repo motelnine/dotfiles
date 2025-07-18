@@ -241,6 +241,6 @@ nnoremap <F4> :call ToggleSpell()<CR>
 inoremap <F4> <C-O>:call ToggleSpell()<CR>
 
 " csv view toggle
-nnoremap <A-Z> :CsvViewToggle<CR>·
-inoremap <A-Z> <Esc>:CsvViewToggle<CR>a·
+nnoremap <A-Z> :CsvViewToggle<CR>
+inoremap <A-Z> <Esc>:CsvViewToggle<CR>a
 
