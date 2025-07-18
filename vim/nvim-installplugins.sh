@@ -20,6 +20,7 @@ git clone https://github.com/airblade/vim-gitgutter ~/.config/nvim/bundle/vim-gi
 git clone https://github.com/fatih/vim-go.git ~/.config/nvim/bundle/vim-go
 git clone https://github.com/dense-analysis/ale.git ~/.config/nvim/bundle/ale
 git clone https://github.com/isRuslan/vim-es6.git ~/.config/nvim/bundle/vim-es6
+git clone https://github.com/hat0uma/csvview.nvim.git ~/.config/nvim/bundle/csvview.nvim
 #git clone https://github.com/wfxr/minimap.vim ~/.config/nvim/bundle/minimap
 
 # Download colorscheme
