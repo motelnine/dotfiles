@@ -158,20 +158,37 @@ nnoremap <silent> <F8> :call ToggleTabs()<CR>
 cnoremap <silent> <F8> :call ToggleTabs()<CR>
 inoremap <silent> <F8> <C-o>:call ToggleTabs()<CR>
 
-" Write mehlp message (must press <enter> afterwards)
+let g:message_list = [
+    \ '+------------------------------------------------+',
+    \ '|                Custom Shortcuts                |',
+    \ '+------+-----------------------------------------+',
+    \ '| <F4> | Toggle Spellcheck                       |',
+    \ '| <F5> | Toggle list characters                  |',
+    \ '| <F6> | Toggle line numbers                     |',
+    \ '| <F7> | Rotate through vertical rules           |',
+    \ '| <F8> | Toggle tabs / 4 spaces                  |',
+    \ '| <F9> | Comment marked block                    |',
+    \ '+------------------------------------------------+',
+    \ '|                Custom Hotkeys                  |',
+    \ '+------------------------------------------------+',
+    \ '| Ctrl+Y      | Copy marked content to clipboard |',
+    \ '| Ctrl+i/u    | Window increase/decrease         |',
+    \ '| Ctrl+k/j    | Page up/down                     |',
+    \ '| Ctrl+n      | Toggle Nerdtree                  |',
+    \ '| Alt+Shift+Z | Toggle CSV format                |',
+    \ '+------------------------------------------------+',
+    \ '+                  Cheatsheet                    +',
+    \ '+------------------------------------------------|',
+    \ '| :%s/sstring/rstring/g | search / replace       |',
+    \ '+------------------------------------------------+',
+    \ ]
+
+
+" Define a function to echo them line-by-line
 function! WriteMessage()
-    " Define the message
-    let message = "<F5>:list <F6>:num <F7>:vr <F9>:cmnt Ctrl+i:+ Ctrl+u:-"
-
-    " Save cursor position and enter command-line mode
-    let save_cursor = getpos('.')
-    call feedkeys(":")
-
-    " Write the message
-    call feedkeys("echo '".message."'")
-
-    " Restore cursor position
-    call setpos('.', save_cursor)
+  for msg in g:message_list
+    echom msg
+  endfor
 endfunction
 
 " Map F12 key to call the function
@@ -222,3 +239,8 @@ endfunction
 
 nnoremap <F4> :call ToggleSpell()<CR>
 inoremap <F4> <C-O>:call ToggleSpell()<CR>
+
+" csv view toggle
+nnoremap <A-Z> :CsvViewToggle<CR>·
+inoremap <A-Z> <Esc>:CsvViewToggle<CR>a·
+
