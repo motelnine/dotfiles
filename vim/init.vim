@@ -16,6 +16,12 @@ Plug 'nvim-lua/plenary.nvim'
 Plug 'nvim-telescope/telescope.nvim', { 'tag': '0.1.8' }
 Plug 'hat0uma/csvview.nvim'
 
+" codecompanion.vim:
+"Plug 'nvim-lua/plenary.nvim'
+"Plug 'nvim-treesitter/nvim-treesitter'
+"Plug 'olimorris/codecompanion.nvim'
+
+
 "Plug 'wfxr/minimap.vim'
 call plug#end()
 
