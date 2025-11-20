@@ -23,7 +23,7 @@ git clone https://github.com/isRuslan/vim-es6.git ~/.config/nvim/bundle/vim-es6
 git clone https://github.com/hat0uma/csvview.nvim.git ~/.config/nvim/bundle/csvview.nvim
 git clone git@github.com:nomnivore/ollama.nvim.git ~/.config/nvim/bundle/ollama.nvim
 git clone git@github.com:olimorris/codecompanion.nvim.git ~/.config/nvim/bundle/codecompanion.nvim
-
+git clone https://github.com/vyperlang/vim-vyper.git ~/.config/nvim/bundle/vim-vyper
 #git clone https://github.com/wfxr/minimap.vim ~/.config/nvim/bundle/minimap
 
 # Download colorscheme
