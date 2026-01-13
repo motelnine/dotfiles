@@ -1,0 +1,96 @@
+* {
+    border: none;
+    border-radius: 0;
+    font-family: "JetBrains Mono", "Symbols Nerd Font";
+    font-size: 12px;
+    min-height: 0;
+}
+
+window#waybar {
+    background: rgba(0, 0, 0, 0.8);
+    color: #dfdfdf;
+}
+
+/* Workspaces */
+#workspaces button {
+    padding: 0 4px;
+    color: #8a8a8a;
+    background: transparent;
+}
+
+#workspaces button.focused {
+    color: #ffffff;
+    border-bottom: 2px solid #FF3168;
+}
+
+#workspaces button.visible {
+    color: #DDDDDD;
+    border-bottom: 2px solid #067D8F;
+}
+
+#workspaces button.urgent {
+    background: #bd2c40;
+    color: #ffffff;
+}
+
+/* Window title */
+#window {
+    padding: 0 8px;
+}
+
+/* CPU */
+#cpu {
+    border-bottom: 2px solid #BF1227;
+    padding: 0 6px;
+}
+
+/* Memory */
+#memory {
+    border-bottom: 2px solid #B87876;
+    padding: 0 6px;
+}
+
+/* Disk */
+#disk {
+    border-bottom: 2px solid #048C6C;
+    padding: 0 6px;
+}
+
+/* Volume */
+#pulseaudio {
+    border-bottom: 2px solid #074856;
+    padding: 0 6px;
+}
+
+/* Battery */
+#battery {
+    border-bottom: 2px solid #3DFF33;
+    padding: 0 6px;
+}
+
+#battery.warning {
+    color: #ff8700;
+}
+
+#battery.critical {
+    color: #ff0000;
+}
+
+/* Clock */
+#clock {
+    border-bottom: 2px solid #16CCCF;
+    padding: 0 8px;
+}
+
+/* Tray 
+#tray {
+    padding: 0 6px;
+}
+*/
+#tray {
+  padding: 6px;
+}
+
+#tray > .item {
+  padding: 4px;
+}
