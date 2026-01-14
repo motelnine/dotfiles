@@ -2,7 +2,7 @@
     border: none;
     border-radius: 0;
     font-family: "JetBrains Mono", "Symbols Nerd Font";
-    font-size: 12px;
+    font-size: 18px;
     min-height: 0;
 }
 
@@ -12,6 +12,7 @@ window#waybar {
 }
 
 /* Workspaces */
+/*
 #workspaces button {
     padding: 0 4px;
     color: #8a8a8a;
@@ -32,11 +33,54 @@ window#waybar {
     background: #bd2c40;
     color: #ffffff;
 }
+*/
+
+#workspaces {
+  margin: 0 6px;
+}
+
+#workspaces button {
+  padding: 0 10px;
+  margin: 0 2px;
+  border-radius: 6px;
+  background: transparent;
+  color: #cdd6f4;
+  border: 2px solid transparent;
+}
+
+/* Empty workspace */
+#workspaces button {
+  color: #6c7086;
+}
+
+/* Has windows */
+#workspaces button.occupied {
+  color: #eeeeee;
+}
+
+/* Workspace on another monitor */
+#workspaces button.visible {
+  border-color: #001E23;
+}
+
+/* Focused workspace */
+#workspaces button.active {
+  background: #001218;
+  color: #05FEF9;
+  border-color: #05FEF9;
+}
+
+/* Urgent window */
+#workspaces button.urgent {
+  background: #ff668C;
+  color: #ffffff;
+}
 
 /* Window title */
 #window {
     padding: 0 8px;
 }
+
 
 /* CPU */
 #cpu {

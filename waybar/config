@@ -1,14 +1,16 @@
 {
+  "output": "DP-2",
+  "exclusive": true,
   "layer": "top",
   "position": "top",
-  "height": 20,
+  "height": 32,
 
   "modules-left": [
-    "sway/workspaces"
+    "hyprland/workspaces"
   ],
 
   "modules-center": [
-    "sway/window"
+    "hyprland/window"
   ],
 
   "modules-right": [
@@ -17,15 +19,66 @@
     "memory",
     "disk",
     "pulseaudio",
-    "battery",
     "tray",
     "clock"
   ],
+
+
+"hyprland/workspaces": {
+  "format": "{icon}",
+  "format-icons": {
+    "1": "1 ",
+    "2": "2 ·",
+    "3": "3 ",
+    "4": "4 󱤟",
+    "5": "5 󰇰",
+	"6": "6 󰢹",
+	"7": "7 ·",
+	"8": "8 ",
+	"9": "9 󰊴",
+	"0": "0 󰟞",
+	"11": "F1 ",
+	"12": "F2 ",
+	"13": "F3 󰍹",
+	"14": "F4 ",
+	"15": "F5 ·",
+	"16": "F6 ",
+	"17": "F7 ",
+	"18": "F8 ",
+	"19": "F9 󰊪",
+	"20": "F10 ",
+	"21": "F11 ",
+	"22": "F12 ",
+    "default": "{id}"
+  },
+  "all-outputs": true,
+  "on-scroll-up": "hyprctl dispatch workspace e+1",
+  "on-scroll-down": "hyprctl dispatch workspace e-1",
+  "persistent_workspaces": {
+    "*": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+  }
+},
+
+  "hyprland/window": {
+    "format": "{title}",
+    "max-length": 80,
+    "separate-outputs": true
+  },
 
   "sway/workspaces": {
     "format": "{name}",
     "disable-scroll": false,
     "all-outputs": true
+  },
+
+  "hyprland/taskbar": {
+    "format": "{icon}",
+    "icon-size": 20,
+    "tooltip": true,
+    "on-click": "activate",
+    "on-click-middle": "close",
+    "ignore-list": ["waybar"],
+    "all-outputs": false
   },
 
   "sway/window": {
