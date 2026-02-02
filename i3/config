@@ -483,6 +483,7 @@ exec --no-startup-id easyeffects --gapplication-service
 exec --no-startup-id env XDG_DATA_DIRS="/usr/share:/usr/local/share:$XDG_DATA_DIRS" xfce4-panel
 exec --no-startup-id cherrytree
 exec --no-startup-id keepassxc
+exec --no-startup-id autotiling
 
 
 # Disable wifi sleep on surface book
