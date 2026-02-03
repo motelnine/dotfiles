@@ -1,0 +1,15 @@
+/* Remove GTK overshoot / undershoot indicators */
+undershoot,
+.undershoot {
+    box-shadow: none;
+    background-image: none;
+}
+
+undershoot.top,
+undershoot.right,
+undershoot.bottom,
+undershoot.left {
+    box-shadow: none;
+    background-image: none;
+}
+
