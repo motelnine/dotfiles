@@ -490,24 +490,26 @@ exec --no-startup-id picom --backend glx -b
 #exec xsetwacom set 'GAOMON Gaomon Tablet Touch Strip pad' MapToOutput HEAD-1
 
 # Redshift mode
-set $mode_redshift Redshift: [0] 6500K [1] 6000K [2] 5500K [3] 5000K [4] 4500K [5] 3500K [Enter] Auto
-bindsym $mod+Shift+t mode "$mode_redshift"
+#set $mode_redshift Redshift: [0] 6500K [1] 6000K [2] 5500K [3] 5000K [4] 4500K [5] 3500K [Enter] Auto
+#bindsym $mod+Shift+t mode "$mode_redshift"
 
-mode "$mode_redshift" {
-    bindsym 0 exec --no-startup-id redshift -O 6500, mode "default"
-    bindsym 1 exec --no-startup-id redshift -O 6000, mode "default"
-    bindsym 2 exec --no-startup-id redshift -O 5500, mode "default"
-    bindsym 3 exec --no-startup-id redshift -O 5000, mode "default"
-    bindsym 4 exec --no-startup-id redshift -O 4500, mode "default"
-    bindsym 5 exec --no-startup-id redshift -O 3500, mode "default"
-    bindsym Return exec --no-startup-id pkill -9 redshift && redshift -x && redshift -c ~/.config/redshift/redshift.conf, mode "default"
-
-    # Exit mode without doing anything
-    bindsym Escape mode "default"
-}
-
+#mode "$mode_redshift" {
+#    bindsym 0 exec --no-startup-id redshift -O 6500, mode "default"
+#    bindsym 1 exec --no-startup-id redshift -O 6000, mode "default"
+#    bindsym 2 exec --no-startup-id redshift -O 5500, mode "default"
+#    bindsym 3 exec --no-startup-id redshift -O 5000, mode "default"
+#    bindsym 4 exec --no-startup-id redshift -O 4500, mode "default"
+#    bindsym 5 exec --no-startup-id redshift -O 3500, mode "default"
+#    bindsym Return exec --no-startup-id pkill -9 redshift && redshift -x && redshift -c ~/.config/redshift/redshift.conf, mode "default"
+#
+##    # Exit mode without doing anything
+#    bindsym Escape mode "default"
+#}
+#
 #exec --no-startup-id redshift -l 33.51:-112.06
-exec --no-startup-id redshift -c ~/.config/redshift/redshift.conf
+#exec --no-startup-id redshift -c ~/.config/redshift/redshift.conf
+exec --no-startup-id gammastep-indicator
+
 exec --no-startup-id easyeffects --gapplication-service
 exec --no-startup-id env XDG_DATA_DIRS="/usr/share:/usr/local/share:$XDG_DATA_DIRS" xfce4-panel
 exec --no-startup-id cherrytree
