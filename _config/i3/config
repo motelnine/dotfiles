@@ -344,7 +344,7 @@ bindsym $mod+c exec gnome-calculator
 #bindsym $mod+F1 exec cherrytree
 bindsym $mod+a exec audacious
 
-# Open Zen Browser
+# Open Zen Browser in about:config zen.window-sync = false
 bindsym $mod+z exec zen-browser --new-window about:blank
 
 # Screen blanking toggle
