@@ -426,6 +426,13 @@ exec steam-runtime -silent
 exec --no-startup-id nm-applet
 # exec --no-startup-id easyeffects --gapplication-service
 
+##Uncomment to Disable screen blanking
+#exec xset s off
+#exec xset -dpms
+#exec xset s noblank
+#exec xset dpms 0 0 0
+
+
 ## Esc Caps swap
 #exec --no-startup-id xmodmap -e "keysym Caps_Lock = Escape" #set caps_lock as escape
 #exec --no-startup-id xmodmap -e "clear lock" #disable caps lock switch
