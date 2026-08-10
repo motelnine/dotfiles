@@ -336,6 +336,7 @@ focus_follows_mouse no
 #bindsym $mod+Shift+x exec i3lock --color "#000000" & xset dpms force off
 bindsym $mod+Shift+x exec i3lock-fancy & xset dpms force off
 #bindsym $mod+Shift+v exec pavucontrol
+#bindsym $mod+Shift+e easyeffects
 #bindsym $mod+n exec nautilus
 
 bindsym $mod+n exec thunar
