@@ -6,14 +6,16 @@
   "height": 32,
 
   "modules-left": [
-    "hyprland/workspaces"
+    "custom/launcher",
+    "wlr/taskbar"
   ],
 
   "modules-center": [
-    "hyprland/window"
+    "sway/window"
   ],
 
   "modules-right": [
+    "sway/workspaces",
     "cpu",
     "temperature",
     "memory",
@@ -23,6 +25,85 @@
     "clock"
   ],
 
+
+"wlr/taskbar": {
+    "format": "{icon}",
+    "icon-size": 20,
+    "tooltip": true,
+    "tooltip-format": "{title}",
+    "on-click": "activate",
+    "on-click-middle": "close",
+    "all-outputs": false,
+    "active-first": true
+},
+
+"custom/launcher": {
+    "format": "",
+    "tooltip": "Applications",
+    "on-click": "nwg-menu -o DP-2 -va top -ha left -mt 0 -ml 0"
+},
+
+"sway/window": {
+    "format": "{title}",
+    "max-length": 80,
+    "tooltip": false
+},
+
+"sway/workspaces": {
+    "format": "{icon}",
+    "format-icons": {
+        "1": "1 ",
+        "2": "2 ·",
+        "3": "3 ",
+        "4": "4 󱤟",
+        "5": "5 󰇰",
+        "6": "6 󰢹",
+        "7": "7 ·",
+        "8": "8 ",
+        "9": "9 󰊴",
+        "10": "0 󰟞",
+        "11": "F1 ",
+        "12": "F2 ",
+        "13": "F3 󰍹",
+        "14": "F4 ",
+        "15": "F5 ·",
+        "16": "F6 ",
+        "17": "F7 ",
+        "18": "F8 ",
+        "19": "F9 󰊪",
+        "20": "F10 ",
+        "21": "F11 ",
+        "22": "F12 ",
+        "default": "{name}",
+        "focused": ""
+    },
+    "all-outputs": true,
+    "disable-scroll": false,
+    "persistent-workspaces": {
+        "1": [],
+        "2": [],
+        "3": [],
+        "4": [],
+        "5": [],
+        "6": [],
+        "7": [],
+        "8": [],
+        "9": [],
+        "10": [],
+        "11": [],
+        "12": [],
+        "13": [],
+        "14": [],
+        "15": [],
+        "16": [],
+        "17": [],
+        "18": [],
+        "19": [],
+        "20": [],
+        "21": [],
+        "22": []
+    }
+},
 
 "hyprland/workspaces": {
   "format": "{icon}",

@@ -1,53 +1,78 @@
-### =========================
-### Core
-### =========================
+### Sway Settings ###
+
 set $mod Mod4
-font pango:monospace 12
+font pango Sans Mono 8
 floating_modifier $mod
-focus_follows_mouse no
+default_orientation auto
 
-### =========================
-### Terminals
-### =========================
-bindsym $mod+t exec kitty
+### Screen Layout ###
+
+## 1440p monitor - DP-1 (center-right)
+#output DP-1 {
+#	mode 2560x1440@164.956Hz
+#	position 3840 0
+#	scale 1
+#	#allow_tearing yes
+#}
+
+## 4K monitor - DP-2 (left)
+#output DP-2 {
+#	mode 3840x2160@60Hz
+#	position 0 0
+#	scale 1
+#}
+
+## 4K monitor - HDMI-1 (far right)
+#output HDMI-A-1 {
+#	mode 3840x2160@60Hz
+#	position 6400 0
+#	scale 1
+#}
+
+## 1080p monitor - HDMI-2 (below center)
+#output HDMI-A-2 {
+#	mode 1920x1080@60Hz
+#	position 3840 1440
+#	scale 1
+#}
+
+
+### Application launcher ###
+
+bindsym $mod+d exec fuzzel --show-actions
+bindsym F2 exec fuzzel --show-actions
+
+
+### Application Shortcuts ###
+
 bindsym $mod+Return exec xfce4-terminal
+bindsym $mod+p exec keepassxc
+bindsym $mod+v exec pavucontrol
+bindsym $mod+Shift+e exec easyeffects
+bindsym $mod+n exec thunar
+bindsym $mod+Shift+Escape exec stacer
+bindsym $mod+c exec gnome-calculator
+bindsym $mod+a exec audacious
+bindsym $mod+z exec zen-browser --new-window about
 
-### =========================
-### Kill / Quit
-### =========================
+
+### Window management ###
+
+# Quit
 bindsym $mod+q kill
 bindsym $mod+Shift+q kill
 
-### =========================
-### Screenshots (Wayland-native)
-### =========================
-# Requires grim + slurp
-bindsym $mod+Print exec grim ~/Pictures/screenshot-$(date +%s).png
-bindsym $mod+Shift+Print exec grim -g "$(slurp)" ~/Pictures/screenshot-$(date +%s).png
-
-### =========================
-### Launchers
-### =========================
-bindsym $mod+d exec rofi -show drun -show-icons
-bindsym $mod+Shift+d exec rofi -show run
-bindsym F2 exec rofi -dmenu
-
-### =========================
-### Focus movement
-### =========================
+# Focus
 bindsym $mod+h focus left
 bindsym $mod+j focus down
 bindsym $mod+k focus up
 bindsym $mod+l focus right
-
 bindsym $mod+Left focus left
 bindsym $mod+Down focus down
 bindsym $mod+Up focus up
 bindsym $mod+Right focus right
 
-### =========================
-### Move windows
-### =========================
+# Move windows
 bindsym $mod+Shift+h move left
 bindsym $mod+Shift+j move down
 bindsym $mod+Shift+k move up
@@ -58,82 +83,52 @@ bindsym $mod+Shift+Down move down
 bindsym $mod+Shift+Up move up
 bindsym $mod+Shift+Right move right
 
-### =========================
-### Layout
-### =========================
+# Split
 bindsym $mod+Control+h split h
 bindsym $mod+Control+v split v
 
+# Fullscreen
 bindsym $mod+f fullscreen toggle
+
+# Layout
 bindsym $mod+s layout stacking
 bindsym $mod+w layout tabbed
 bindsym $mod+e layout toggle split
 
+# Floating
 bindsym $mod+Shift+space floating toggle
-bindsym $mod+Shift+s sticky toggle
 bindsym $mod+space focus mode_toggle
 
-### =========================
-### Media (Audacious)
-### =========================
-bindsym $mod+Mod1+l exec audacious -p -f
-bindsym $mod+Mod1+h exec audacious -p -r
-bindsym $mod+Mod1+space exec audacious --play-pause
-
-#### =========================
-#### Waybar
-#### =========================
-exec dbus-update-activation-environment --systemd DISPLAY WAYLAND_DISPLAY SWAYSOCK XDG_CURRENT_DESKTOP=sway
-exec systemctl --user import-environment DISPLAY WAYLAND_DISPLAY SWAYSOCK XDG_CURRENT_DESKTOP
-exec_always --no-startup-id waybar
-exec_always --no-startup-id volumeicon
-
-#### =========================
-#### xfce4-panel
-#### =========================
-#exec_always --no-startup-id env GDK_BACKEND=x11 xfce4-panel
-#
-## Make the panel appear at the top and behave as a panel
-#for_window [class="Xfce4-panel"] {
-#    # Place at the top
-#    move position 0 0
-#
-#    # Lock it so it can't be moved or resized
-#    floating disable
-#    border none
-#    sticky enable
-#    focus disable
-#    # Optional: give it highest layer
-#    layer top
-#}
-
-### =========================
-### Workspaces
-### =========================
-set $ws1 "1 "
-set $ws2 "2 "
-set $ws3 "3 "
-set $ws4 "4 󱤟"
-set $ws5 "5 󰇰"
-set $ws6 "6 󰢹"
-set $ws7 "7 "
-set $ws8 "8 "
-set $ws9 "9 󰊴"
-set $ws0 "0 󰟞"
-set $ws11 "F1   "
-set $ws12 "F2   "
-set $ws13 "F3 󰍹  "
-set $ws14 "F4   "
-set $ws15 "F5   "
-set $ws16 "F6   "
-set $ws17 "F7   "
-set $ws18 "F8   "
-set $ws19 "F9 󰊪  "
-set $ws20 "F10   "
-set $ws21 "F11   "
-set $ws22 "F12   "
+# Sticky
+bindsym $mod+Shift+s sticky toggle
 
 
+### Workspace definitions ###
+
+set $ws1 "1   "
+set $ws2 "2   "
+set $ws3 "3   "
+set $ws4 "4 󱤟  "
+set $ws5 "5 󰇰  "
+set $ws6 "6 󰢹  "
+set $ws7 "7    "
+set $ws8 "8   "
+set $ws9 "9 󰊴  "
+set $ws0 "0 󰟞  "
+set $ws11 "F1   "
+set $ws12 "F2   "
+set $ws13 "F3 󰍹  "
+set $ws14 "F4   "
+set $ws15 "F5   "
+set $ws16 "F6   "
+set $ws17 "F7   "
+set $ws18 "F8   "
+set $ws19 "F9 󰊪  "
+set $ws20 "F10   "
+set $ws21 "F11   "
+set $ws22 "F12   "
+
+# Switch workspace
 bindsym $mod+1 workspace $ws1
 bindsym $mod+2 workspace $ws2
 bindsym $mod+3 workspace $ws3
@@ -157,7 +152,7 @@ bindsym $mod+F10 workspace $ws20
 bindsym $mod+F11 workspace $ws21
 bindsym $mod+F12 workspace $ws22
 
-
+# Move focused container to workspace
 bindsym $mod+Shift+1 move container to workspace $ws1
 bindsym $mod+Shift+2 move container to workspace $ws2
 bindsym $mod+Shift+3 move container to workspace $ws3
@@ -168,7 +163,6 @@ bindsym $mod+Shift+7 move container to workspace $ws7
 bindsym $mod+Shift+8 move container to workspace $ws8
 bindsym $mod+Shift+9 move container to workspace $ws9
 bindsym $mod+Shift+0 move container to workspace $ws0
-
 bindsym $mod+Shift+F1 move container to workspace $ws11
 bindsym $mod+Shift+F2 move container to workspace $ws12
 bindsym $mod+Shift+F3 move container to workspace $ws13
@@ -182,92 +176,177 @@ bindsym $mod+Shift+F10 move container to workspace $ws20
 bindsym $mod+Shift+F11 move container to workspace $ws21
 bindsym $mod+Shift+F12 move container to workspace $ws22
 
+# Workspace cycling
+bindsym Mod1+Tab workspace next
+bindsym Mod1+Shift+Tab workspace prev
 
-### =========================
-### Resize Mode
-### =========================
+
+### Resize mode ###
 mode "resize" {
-    bindsym h resize grow width 5
-    bindsym l resize shrink width 5
-    bindsym k resize shrink height 5
-    bindsym j resize grow height 5
+	bindsym j resize shrink width 5 px or 1 ppt
+	bindsym k resize grow height 5 px or 1 ppt
+	bindsym l resize shrink height 5 px or 1 ppt
+	bindsym h resize grow width 5 px or 1 ppt
 
-    bindsym Return mode "default"
-    bindsym Escape mode "default"
+	bindsym Left resize shrink width 5 px or 1 ppt
+	bindsym Down resize grow height 5 px or 1 ppt
+	bindsym Up resize shrink height 5 px or 1 ppt
+	bindsym Right resize grow width 5 px or 1 ppt
+
+	bindsym Return mode "default"
+	bindsym Escape mode "default"
 }
+
 bindsym $mod+r mode "resize"
 
-### =========================
-### Gaps
-### =========================
-smart_gaps on
-smart_borders no_gaps
-gaps inner 15
-gaps outer -10
 
-### =========================
-### Borders
-### =========================
+### Gap management ###
+
+smart_borders no_gaps
+smart_gaps on
+
+gaps outer 0
+gaps inner 10
+
+set $mode_gaps Gaps: (o) outer, (i) inner
+set $mode_gaps_outer Outer Gaps
+set $mode_gaps_inner Inner Gaps
+
+bindsym $mod+Shift+g mode "$mode_gaps"
+
+mode "$mode_gaps" {
+	bindsym o mode "$mode_gaps_outer"
+	bindsym i mode "$mode_gaps_inner"
+	bindsym Return mode "default"
+	bindsym Escape mode "default"
+}
+
+mode "$mode_gaps_inner" {
+	bindsym plus gaps inner current plus 5
+	bindsym minus gaps inner current minus 5
+	bindsym 0 gaps inner current set 0
+	bindsym Shift+plus gaps inner all plus 5
+	bindsym Shift+minus gaps inner all minus 5
+	bindsym Shift+0 gaps inner all set 0
+	bindsym Return mode "default"
+	bindsym Escape mode "default"
+}
+
+mode "$mode_gaps_outer" {
+	bindsym plus gaps outer current plus 5
+	bindsym minus gaps outer current minus 5
+	bindsym 0 gaps outer current set 0
+	bindsym Shift+plus gaps outer all plus 5
+	bindsym Shift+minus gaps outer all minus 5
+	bindsym Shift+0 gaps outer all set 0
+	bindsym Return mode "default"
+	bindsym Escape mode "default"
+}
+
+
+### Appearance ###
+
+# Orange borders
+set $base00 #000000
+set $base01 #000000
+set $base02 #000000
+set $base03 #75715e
+set $base04 #a59f85
+set $base05 #f8f8f2
+set $base06 #f5f4f1
+set $base07 #f9f8f5
+set $base08 #f92672
+set $base09 #fd971f
+set $base0A #f4bf75
+set $base0B #a6e22e
+set $base0C #EE7100
+set $base0D #295264
+set $base0E #ae81ff
+set $base0F #cc6633
+
+client.focused          $base0D $base0D $base05 $base0C $base0D
+client.focused_inactive $base02 $base02 $base03 $base01 $base02
+client.unfocused        $base01 $base01 $base03 $base01 $base01
+client.urgent           $base02 $base08 $base07 $base08 $base08
+
 default_border pixel 1
 default_floating_border pixel 1
 
-### =========================
-### Colors
-### =========================
-set $base0D #295264
-set $base00 #00000000
+focus_follows_mouse no
 
-client.focused          $base0D $base0D $base00 $base0D
-client.unfocused        #222222 #222222 #888888 #222222
-client.focused_inactive #333333 #333333 #aaaaaa #333333
-client.urgent           #ff0000 #ff0000 #ffffff #ff0000
 
-### =========================
-### Floating rules
-### =========================
-for_window [app_id="thunar"] floating enable
-for_window [app_id="keepassxc"] floating enable
-for_window [app_id="vlc"] floating enable
-for_window [app_id="audacious"] floating enable
-for_window [app_id="gnome-calculator"] floating enable
-for_window [app_id="stacer"] floating enable
-for_window [app_id="tauon"] floating enable
+### Window rules ###
+for_window [instance="thunar"] floating enable
+for_window [instance="steamwebhelper"] floating enable
+for_window [instance="keepassxc"] floating enable
+for_window [instance="gedit"] floating enable
+for_window [instance="cherrytree"] floating enable
+for_window [instance="lxappearance"] floating enable
+for_window [instance="VirtualBox Manager"] floating enable
+for_window [instance="VirtualBox"] floating enable
+for_window [instance="vlc"] floating enable
+for_window [instance="audacious"] floating enable
+for_window [instance="totem"] floating enable
+for_window [instance="dolphin-emu"] floating enable
+for_window [instance="eog"] floating enable
+for_window [instance="spotify"] floating enable
+for_window [instance="pulseaudio-equalizer-gtk"] floating enable
+for_window [instance="org.remmina.Remmina"] floating enable
+for_window [instance="agave"] floating enable
+for_window [instance="gpick"] floating enable
+for_window [instance="xfce4-taskmanager"] floating enable
+for_window [instance="plasma-systemmonitor"] floating enable
+for_window [instance="gnome-disks"] floating enable
+for_window [instance="gnome-calendar"] floating enable
+for_window [instance="gnome-calculator"] floating enable
+for_window [instance="snes9x-gtk"] floating enable
+for_window [instance="Eddie"] floating enable
+for_window [instance="file-roller"] floating enable
+for_window [instance="lutris"] floating enable
+for_window [instance="nvidia-settings"] floating enable
+for_window [instance="parole"] floating enable
+for_window [instance="gnome-menu-editor-qt"] floating enable
+for_window [instance="xfce4-panel"] floating enable
+for_window [instance="evince"] floating enable
+for_window [instance="stacer"] floating enable
+for_window [instance="pavucontrol"] floating enable
 
-### =========================
-### Volume
-### =========================
-bindsym XF86AudioMute exec volume toggle
-bindsym XF86AudioLowerVolume exec /bin/volume down
-bindsym XF86AudioRaiseVolume exec /bin/volume up
 
-### =========================
-### Lock screen
-### =========================
+### Audio ###
+bindsym XF86AudioRaiseVolume exec pactl set-sink-volume @DEFAULT_SINK@ +5%
+bindsym XF86AudioLowerVolume exec pactl set-sink-volume @DEFAULT_SINK@ -5%
+bindsym XF86AudioMute exec pactl set-sink-mute @DEFAULT_SINK@ toggle
+bindsym $mod+Control+k exec pactl set-sink-volume @DEFAULT_SINK@ +5%
+bindsym $mod+Control+j exec pactl set-sink-volume @DEFAULT_SINK@ -5%
+
+# Audacious
+
+bindsym $mod+Mod1+l exec audacious -p -f
+bindsym $mod+Mod1+h exec audacious -p -r
+bindsym $mod+Mod1+space exec audacious --play-pause
+
+
+### Screenshots and screen locking ###
+
+# Requires grim, slurp, and swaylock
+bindsym --release $mod+Print exec grim "$(xdg-user-dir PICTURES)/screenshot-$(date +%F-%H%M%S).png"
+bindsym --release $mod+Shift+Print exec sh -c 'grim -g "$(slurp)" "$(xdg-user-dir PICTURES)/screenshot-$(date +%F-%H%M%S).png"'
 bindsym $mod+Shift+x exec swaylock -f -c 000000
 
-### =========================
-### Startup
-### =========================
-exec_always swaybg -i ~/Pictures/Wallpaper/astro.jpg -m tile
-exec easyeffects --gapplication-service
-exec volumeicon
-exec steam-runtime -silent
-exec cherrytree
-exec keepassxc
-exec xfce4-terminal --hold -x '/bin/syncup'
 
-### =========================
-### Keyboard
-### =========================
-input * {
-    xkb_layout us
-    xkb_options caps:escape
-}
+# Configuration controls
+bindsym $mod+Shift+c reload
 
-### =========================
-### Idle / DPMS
-### =========================
-exec swayidle -w \
-    timeout 300 'swaylock -f -c 000000' \
-    timeout 600 'swaymsg "output * dpms off"' \
-    resume 'swaymsg "output * dpms on"'
+
+# Startup applications
+exec --no-startup-id ckb-next -b
+exec --no-startup-id remmina -i
+exec --no-startup-id nm-applet
+exec --no-startup-id easyeffects --gapplication-service
+exec --no-startup-id cherrytree
+exec --no-startup-id keepassxc
+exec --no-startup-id steam -silent
+exec --no-startup-id waybar
+
+# Wallpaper (requires swaybg)
+exec --no-startup-id swaybg -i ~/Pictures/Wallpaper/ny-rain.jpg -m fill
