@@ -39,9 +39,9 @@ default_orientation auto
 
 ### Application launcher ###
 
-bindsym $mod+d exec fuzzel --show-actions
-bindsym F2 exec fuzzel --show-actions
-
+exec nwg-drawer -r -is 48 -c 5
+bindsym $mod+d exec nwg-drawer
+bindsym F2 exec nwg-drawer
 
 ### Application Shortcuts ###
 
@@ -276,40 +276,40 @@ focus_follows_mouse no
 
 
 ### Window rules ###
-for_window [instance="thunar"] floating enable
-for_window [instance="steamwebhelper"] floating enable
-for_window [instance="keepassxc"] floating enable
-for_window [instance="gedit"] floating enable
-for_window [instance="cherrytree"] floating enable
-for_window [instance="lxappearance"] floating enable
-for_window [instance="VirtualBox Manager"] floating enable
-for_window [instance="VirtualBox"] floating enable
-for_window [instance="vlc"] floating enable
-for_window [instance="audacious"] floating enable
-for_window [instance="totem"] floating enable
-for_window [instance="dolphin-emu"] floating enable
-for_window [instance="eog"] floating enable
-for_window [instance="spotify"] floating enable
-for_window [instance="pulseaudio-equalizer-gtk"] floating enable
-for_window [instance="org.remmina.Remmina"] floating enable
-for_window [instance="agave"] floating enable
-for_window [instance="gpick"] floating enable
-for_window [instance="xfce4-taskmanager"] floating enable
-for_window [instance="plasma-systemmonitor"] floating enable
-for_window [instance="gnome-disks"] floating enable
-for_window [instance="gnome-calendar"] floating enable
-for_window [instance="gnome-calculator"] floating enable
-for_window [instance="snes9x-gtk"] floating enable
-for_window [instance="Eddie"] floating enable
-for_window [instance="file-roller"] floating enable
-for_window [instance="lutris"] floating enable
-for_window [instance="nvidia-settings"] floating enable
-for_window [instance="parole"] floating enable
-for_window [instance="gnome-menu-editor-qt"] floating enable
-for_window [instance="xfce4-panel"] floating enable
-for_window [instance="evince"] floating enable
-for_window [instance="stacer"] floating enable
-for_window [instance="pavucontrol"] floating enable
+for_window [app_id="thunar"] floating enable
+for_window [app_id="steamwebhelper"] floating enable
+for_window [app_id="keepassxc"] floating enable
+for_window [app_id="gedit"] floating enable
+for_window [app_id="cherrytree"] floating enable
+for_window [app_id="lxappearance"] floating enable
+for_window [app_id="VirtualBox Manager"] floating enable
+for_window [app_id="VirtualBox"] floating enable
+for_window [app_id="vlc"] floating enable
+for_window [app_id="audacious"] floating enable
+for_window [app_id="totem"] floating enable
+for_window [app_id="dolphin-emu"] floating enable
+for_window [app_id="eog"] floating enable
+for_window [app_id="spotify"] floating enable
+for_window [app_id="pulseaudio-equalizer-gtk"] floating enable
+for_window [app_id="org.remmina.Remmina"] floating enable
+for_window [app_id="agave"] floating enable
+for_window [app_id="gpick"] floating enable
+for_window [app_id="xfce4-taskmanager"] floating enable
+for_window [app_id="plasma-systemmonitor"] floating enable
+for_window [app_id="gnome-disks"] floating enable
+for_window [app_id="gnome-calendar"] floating enable
+for_window [app_id="gnome-calculator"] floating enable
+for_window [app_id="snes9x-gtk"] floating enable
+for_window [app_id="Eddie"] floating enable
+for_window [app_id="file-roller"] floating enable
+for_window [app_id="lutris"] floating enable
+for_window [app_id="nvidia-settings"] floating enable
+for_window [app_id="parole"] floating enable
+for_window [app_id="gnome-menu-editor-qt"] floating enable
+for_window [app_id="xfce4-panel"] floating enable
+for_window [app_id="evince"] floating enable
+for_window [app_id="stacer"] floating enable
+for_window [app_id="pavucontrol"] floating enable
 
 
 ### Audio ###
