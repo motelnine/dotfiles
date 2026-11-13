@@ -36,6 +36,9 @@ default_orientation auto
 #	scale 1
 #}
 
+## Set gaming monitor as XWayland primary
+#exec_always xrandr --output DP-1 --primary
+
 
 ### Application launcher ###
 
