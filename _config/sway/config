@@ -246,6 +246,10 @@ mode "$mode_gaps_outer" {
 	bindsym Escape mode "default"
 }
 
+# Swap caps lock and escape
+input * {
+    xkb_options caps:swapescape
+}
 
 ### Appearance ###
 
