@@ -347,6 +347,7 @@ exec --no-startup-id cherrytree
 exec --no-startup-id keepassxc
 exec --no-startup-id steam -silent
 exec --no-startup-id waybar
+exec --no-startup-id xembedsniproxy
 
 # Wallpaper (requires swaybg)
 exec --no-startup-id swaybg -i ~/Pictures/Wallpaper/ny-rain.jpg -m fill
