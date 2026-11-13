@@ -338,7 +338,9 @@ bindsym $mod+Mod1+space exec audacious --play-pause
 # Requires grim, slurp, and swaylock
 bindsym --release $mod+Print exec grim "$(xdg-user-dir PICTURES)/screenshot-$(date +%F-%H%M%S).png"
 bindsym --release $mod+Shift+Print exec sh -c 'grim -g "$(slurp)" "$(xdg-user-dir PICTURES)/screenshot-$(date +%F-%H%M%S).png"'
-bindsym $mod+Shift+x exec swaylock -f -c 000000
+bindsym $mod+Shift+x exec swaylock -f -c 000000 && sleep 0.5 && pkill -USR1 -x swayidle
+exec swayidle -d -w timeout 86400 'swaymsg "output * dpms off"' resume 'swaymsg "output * dpms on"'
+
 
 
 # Configuration controls
