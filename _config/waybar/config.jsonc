@@ -1,0 +1,91 @@
+/*
+ * @author Muhammad Haikal Hakim
+ * @repository https://github.com/haikal-hakim/athena
+ */
+{
+  "exclusive": true,
+  "layer": "top",
+  "height": 42,
+  "spacing": 6,
+  "include": [
+    "./modules/groups.jsonc",
+    "./modules/distro.jsonc",
+    "./modules/storage.jsonc",
+    "./modules/system.jsonc",
+    "./modules/power-profiles-daemon.jsonc",
+    "./modules/workspace.jsonc",
+    "./modules/idle-ihibitor.jsonc",
+    "./modules/audio.jsonc",
+    "./modules/connections.jsonc",
+    "./modules/battery.jsonc",
+    "./modules/clock.jsonc",
+    "./modules/tray-notif.jsonc"
+  ],
+  "modules-left": [
+    "custom/launcher",
+    "group/distro-group",
+    "group/storage",
+    "group/system"
+  ],
+  "modules-center": [
+	"sway/window",
+    "idle_inhibitor"
+  ],
+  "modules-right": [
+    "sway/workspaces",
+    "group/audio",
+    "group/connections",
+    "battery",
+    "clock",
+    "group/tray-group"
+  ],
+
+"custom/launcher": {
+    "format": "",
+    "tooltip": "Applications",
+    "on-click": "nwg-menu -o DP-2 -va top -ha left -mt 0 -ml 0"
+},
+
+"sway/workspaces": {
+    "format": "{icon}",
+    "format-icons": {
+        "1": "1 ",
+        "2": "2 ·",
+        "3": "3 ",
+        "4": "4 󱤟",
+        "5": "5 󰇰",
+        "6": "6 󰢹",
+        "7": "7 ·",
+        "8": "8 ",
+        "9": "9 󰊴",
+        "10": "0 󰟞",
+        "11": "F1 ",
+        "12": "F2 ",
+        "13": "F3 󰍹",
+        "14": "F4 ",
+        "15": "F5 ·",
+        "16": "F6 ",
+        "17": "F7 ",
+        "18": "F8 ",
+        "19": "F9 󰊪",
+        "20": "F10 ",
+        "21": "F11 ",
+        "22": "F12 ",
+        "default": "--"
+    },
+    "all-outputs": true,
+    "disable-scroll": false
+  },
+
+  "wlr/taskbar": {
+    "format": "{icon}",
+    "icon-size": 20,
+    "tooltip": true,
+    "tooltip-format": "{title}",
+    "on-click": "activate",
+    "on-click-middle": "close",
+    "all-outputs": false,
+    "active-first": true
+  }
+
+}

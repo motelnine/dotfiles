@@ -1,140 +1,49 @@
+@import "tokens/colors.css";
+@import "tokens/state.css";
+@import "tokens/workspace.css";
+@import "tokens/widget.css";
+@import "tokens/batt-clock.css";
+@import "tokens/slider.css";
+
 * {
-    border: none;
-    border-radius: 0;
-    font-family: "JetBrains Mono", "Symbols Nerd Font";
-    font-size: 18px;
-    min-height: 0;
+  margin: 0;
+  padding: 0;
+  min-height: 0px;
+  border: none;
+  border-radius: 0;
+  font-family: "JetBrainsMono Nerd Font";
 }
 
 window#waybar {
-    background: rgba(0, 0, 0, 0.8);
-    color: #dfdfdf;
+  background-color: rgba(0, 0, 0, 0.9);
 }
 
-/* Workspaces */
-/*
+/* Default: existing but inactive workspaces */
 #workspaces button {
-    padding: 0 4px;
-    color: #8a8a8a;
-    background: transparent;
+    color: #a1beb5;
 }
 
+/* Visible on another monitor */
+#workspaces button.visible {
+    color: #36ada7;
+}
+
+/* Currently focused workspace */
 #workspaces button.focused {
-    color: #ffffff;
-    border-bottom: 2px solid #FF3168;
+    color: #ff0160;
+    font-weight: bold;
 }
 
-#workspaces button.visible {
-    color: #DDDDDD;
-    border-bottom: 2px solid #067D8F;
+/* Hover */
+#workspaces button:hover {
+    background: rgba(255, 255, 255, 0.1);
 }
 
-#workspaces button.urgent {
-    background: #bd2c40;
-    color: #ffffff;
-}
-*/
-
-#workspaces {
-  margin: 0 6px;
+#custom-launcher {
+  margin: 4px 5px;
+  padding: 6px 15px 6px 10px;
+  background-color: #1b2023;
+  border-radius: 20px;
+  color: #36ada7;
 }
 
-#workspaces button {
-  padding: 0 10px;
-  margin: 0 2px;
-  border-radius: 6px;
-  background: transparent;
-  color: #cdd6f4;
-  border: 2px solid transparent;
-}
-
-/* Empty workspace */
-#workspaces button {
-  color: #6c7086;
-}
-
-/* Has windows */
-#workspaces button.occupied {
-  color: #eeeeee;
-}
-
-/* Workspace on another monitor */
-#workspaces button.visible {
-  border-color: #001E23;
-}
-
-/* Focused workspace */
-#workspaces button.active {
-  background: #001218;
-  color: #05FEF9;
-  border-color: #05FEF9;
-}
-
-/* Urgent window */
-#workspaces button.urgent {
-  background: #ff668C;
-  color: #ffffff;
-}
-
-/* Window title */
-#window {
-    padding: 0 8px;
-}
-
-
-/* CPU */
-#cpu {
-    border-bottom: 2px solid #BF1227;
-    padding: 0 6px;
-}
-
-/* Memory */
-#memory {
-    border-bottom: 2px solid #B87876;
-    padding: 0 6px;
-}
-
-/* Disk */
-#disk {
-    border-bottom: 2px solid #048C6C;
-    padding: 0 6px;
-}
-
-/* Volume */
-#pulseaudio {
-    border-bottom: 2px solid #074856;
-    padding: 0 6px;
-}
-
-/* Battery */
-#battery {
-    border-bottom: 2px solid #3DFF33;
-    padding: 0 6px;
-}
-
-#battery.warning {
-    color: #ff8700;
-}
-
-#battery.critical {
-    color: #ff0000;
-}
-
-/* Clock */
-#clock {
-    border-bottom: 2px solid #16CCCF;
-    padding: 0 8px;
-}
-
-/* Tray 
-#tray {
-    padding: 0 6px;
-}
-*/
-#tray {
-  padding: 6px;
-}
-
-#tray > .item {
-  padding: 4px;
-}
