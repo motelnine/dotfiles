@@ -40,6 +40,11 @@ output DP-1 {
 #exec_always xrandr --output DP-1 --primary
 
 
+### Swap escape and caps lock
+input * {
+    xkb_options caps:swapescape
+}
+
 ### Application launcher ###
 exec nwg-drawer -r -is 48 -c 5
 bindsym $mod+d exec nwg-drawer
